@@ -1,16 +1,16 @@
 # Brief CENG Capstone Project Charter
 -  [x] Select Project area:
-1. [ ] :bike: Facilities: e.g. Bicycle Rental/Parking Lot/Vision System
+1. [X] :bike: Facilities: e.g. Bicycle Rental/Parking Lot/Vision System
 2. [ ] :factory: Building Automation: e.g. Greenhouse/SolarPanel/Home
 3. [ ] :movie_camera: Consumer: e.g. Entertainment Protocol DMX/Baby Monitoring Project
 4. [ ] :mortar_board: Education: e.g. Robust Hackable Educational Project
 5. [ ] :robot: Robotics: e.g. Control/Navigation/Dashboard
 6. [ ] :ski: Health and Wellness: e.g. Wearable
 ####  Project Title: 
-Replace this with your title
+TriSense: An Intelligent Waste Management System
 
 ####  Executive Summary/Description of the Project (75 to 100 words): 
-Write here
+The Trisense Smart Bin System employs three crucial sensors for efficient waste management: the Ultrasonic Distance Sensor (HC-SR04) gauges fill levels, the DS18B20 Temperature Sensor tracks temperature, and the FC-51 IR Proximity Sensor detects lid status. These sensors collaborate seamlessly, offering real-time data for enhanced waste collection efficiency. An Android app complements this system, allowing users to monitor bins and optimize collections via Firebase integration. This innovation promises to transform waste management, fostering environmental sustainability and economic efficiency.
 
 ####  Has this project been approved by all parties for posting (Y/N)?
 -  [x] Yes
@@ -25,45 +25,38 @@ Write here
 </details>
 
 ####  List of Names of Students Involved in Project (first and last names and separate members by a comma):
-First Last, One Two
+Avindra Seepersaud (N01405195), Meet Patel (n01460090), Kyle Menegotti (n01462135)
 
 ####  Planned contact email for the [Expo submission form](https://appliedtechnology.humber.ca/shows/past-shows/advanced-manufacturing-projects/advanced-manufacturing-student-submission-form.html)
-example_at_example_dot_com
+avindra.seepersaud@humber.ca
 
 ####  For each individual student state whether they have a complete parts kit, a multimeter, what development platform they have, what sensors/effectors they have along with system Requirements (List what sensors/effectors are to do), functionalty of prototype/describe any unsoldered connections.
-Student One:
-- [ ] Complete parts kit
-- [ ] Multimeter
-- Development platform: Broadcom single board computer
-- Sensor/effector 1:
-- Unsoldered connection description:   
+Student One: Avindra Seepersaud 
+- [X] Complete parts kit
+- [X] Multimeter
+- Development platform: Raspberry Pi 4 - Combines the official RPi Linux OS with Android OS to host an application, all interconnected through Firebase services. 
+- Sensor/effector 1: HC–SR04 Ultrasonic Distance Sensor - This sensor measures the fill line by emitting sound waves and calculating the time it takes for the waves to bounce back, indicating the distance to the fill line.
+- Unsoldered connection description: FC-51 IR Proximity Sensor and DS18B20 Tempature Sensor are not soldered on my hardware.
 
-Student Two:
-- [ ] Complete parts kit
-- [ ] Multimeter
-- Development platform: Broadcom single board computer
-- Sensor/effector 2:
-- Unsoldered connection description:   
+Student Two: Meet Patel
+- [X] Complete parts kit
+- [X] Multimeter
+- Development platform: Raspberry Pi 4 - Combines the official RPi Linux OS with Android OS to host an application, all interconnected through Firebase services. 
+- Sensor/effector 2: FC-51 IR Proximity Sensor - This sensor detects whether the bin is open or closed by emitting and receiving infrared light, triggering a signal change when the lid moves.
+- Unsoldered connection description: HC–SR04 Ultrasonic Distance Sensor and DS18B20 Tempature Sensor are not soldered on my hardware.
 
-Student Three:
-- [ ] Complete parts kit
-- [ ] Multimeter
-- Development platform: Broadcom single board computer
-- Sensor/effector 3:
-- Unsoldered connection description:   
-
-Student Four:
-- [ ] Complete parts kit
-- [ ] Multimeter
-- Development platform: Broadcom single board computer
-- Sensor/effector 4:
-- Unsoldered connection description:   
+Student Three: Kyle Menegotti
+- [X] Complete parts kit
+- [X] Multimeter
+- Development platform: Raspberry Pi 4 - Combines the official RPi Linux OS with Android OS to host an application, all interconnected through Firebase services. 
+- Sensor/effector 3: DS18B20 Tempature Sensor - This sensor monitors ambient temperature within the Smart Bin System, ensuring proper waste storage conditions for efficient and environmentally conscious waste management.
+- Unsoldered connection description: HC–SR04 Ultrasonic Distance Sensor and FC-51 IR Proximity Sensor are not soldered on my hardware.
 
 ####  GitHub repository link(s):
-[Example link - ezpark](https://github.com/AkashSingh8137/ezpark)
+https://github.com/AvindraSeepersaud5195/TriSenseAnIntelligentWasteManagementSystem
 
 ####  Google Play App download link:
-[Example link - EZPARK](https://play.google.com/store/apps/details?id=ca.ezlock.it.ezpark&pli=1)
+https://play.google.com/store/apps/details?id=ca.innovators.united.it.trisense.an.intelligent.waste.management.system
 
 #### Hours per student:
 $14\*3=42$ in class hours, $14\*3=42+$ outside of class.
@@ -80,8 +73,15 @@ Creation of a Prototype that is not to be left powered unattended. Keeping safet
 
 ####  Design approach:
 ```mermaid
-flowchart LR;RaspberryPi<-->Firebase;Firebase<-->Android;
-RaspberryPi<-.->Bluetooth;Bluetooth<-.->Android;Arduino<-->RaspberryPi;Arduino--->Stepper; LoadCellHX711--->RaspberryPi; RaspberryPi--->240x320LCD;RaspberryPi--->Relay;Relay--->Solenoid;
+flowchart LR;
+DS18B20-->RaspberryPi;
+HC-SR04-->RaspberryPi;
+FC-51IR -->RaspberryPi;
+RaspberryPi<-->Firebase;
+Firebase<-->Android;
+RaspberryPi<-.->Bluetooth;
+Bluetooth<-.->Android;
 ```
 ####  Mandate: 
 Self funded (unless a sponsor has contractually agreed to contribute).
+- This project is completely self-funded.
