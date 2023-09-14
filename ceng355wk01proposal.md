@@ -49,7 +49,7 @@ Student Three: Kyle Menegotti
 - [X] Complete parts kit
 - [X] Multimeter
 - Development platform: Raspberry Pi 4 - Combines the official RPi Linux OS with Android OS to host an application, all interconnected through Firebase services. 
-- Sensor/effector 3: DS18B20 Tempature Sensor - This sensor monitors ambient temperature within the Smart Bin System, ensuring proper waste storage conditions for efficient and environmentally conscious waste management.
+- Sensor/effector 3: DS18B20 Temperature Sensor - This sensor measures temperature by utilizing a digital probe to accurately detect and relay temperature data within the bin, aiding in monitoring environmental conditions.
 - Unsoldered connection description: HC–SR04 Ultrasonic Distance Sensor and FC-51 IR Proximity Sensor are not soldered on my hardware.
 
 ####  GitHub repository link(s):
